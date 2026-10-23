@@ -42,7 +42,7 @@ README.md
 - `assets/images/conteudos/`: capas das publicações selecionadas.
 - `sw.js`: desativa o cache offline herdado do modelo anterior.
 
-As páginas de prévia e os arquivos sem uso do modelo original foram retirados da versão atual. As alterações são aplicadas diretamente ao site oficial, após conferência, com cópia de recuperação. As fotografias e artes fornecidas foram preservadas, apenas realocadas.
+As páginas de prévia e os arquivos sem uso do modelo original foram retirados da versão atual. As alterações são aplicadas diretamente ao site oficial, após conferência, com cópia de recuperação. As imagens de apresentação foram recortadas para retirar barras do celular, cabeçalhos, botões e demais margens de captura. As artes e a fotografia são exibidas a partir de arquivos limpos, sem depender de deslocamentos em CSS. A imagem de compartilhamento também usa o recorte limpo. Os arquivos anteriores continuam no histórico e em `backup/antes-recortes-2026-10-23`.
 
 ## Conteúdo e atendimento
 
