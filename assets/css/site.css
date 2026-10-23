@@ -42,3 +42,6 @@
 
 /* Valores por modalidade */
 .service .service-price{position:relative;z-index:1;margin-top:15px;color:var(--gold);font-size:17px;font-weight:600;line-height:1.5}.service.sand .service-price{color:#61513d}.price-list{margin:8px 0 18px;padding:0}.price-list>div{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:11px 0;border-bottom:1px solid #ffffff25}.sand .price-list>div{border-color:#30291f30}.price-list dt{font-size:13px;line-height:1.5;min-width:0}.price-list dd{margin:0;white-space:nowrap;font-size:14px;font-weight:600}.service-more .price-note{padding:0 0 16px;font-size:12px;line-height:1.6;opacity:.8}@media(max-width:380px){.price-list>div{flex-wrap:wrap;gap:3px}.price-list dd{margin-left:auto}}
+
+/* Equivalência por sessão: total do pacote em destaque */
+.price-list dd strong{display:block;font:inherit}.price-list dd .package-rate{display:block;margin-top:5px;font-size:11px;line-height:1.5;font-weight:400;opacity:.8;white-space:normal}
