@@ -67,9 +67,9 @@ Se o domínio ou o nome do repositório mudar, atualize:
 
 O compartilhamento usa automaticamente o endereço da página aberta. Os links internos e arquivos usam caminhos relativos.
 
-## Conteúdos do Instagram
+## Conteúdos do YouTube e Instagram
 
-A seção `#conteudos`, após a apresentação de Thiago, mostra três publicações selecionadas. As capas WebP ficam em `assets/images/thiago/`; o conteúdo original é carregado no diálogo somente após um clique. Há também um link direto para cada publicação, caso o Instagram solicite login ou não exiba a incorporação.
+A seção `#conteudos`, após a apresentação de Thiago, reúne um vídeo do YouTube em destaque e três publicações selecionadas do Instagram. O destaque usa uma capa editorial em HTML/CSS, com título do vídeo, e o player do YouTube com privacidade aprimorada só é carregado após um clique. Há também dois links para conversas de astrologia e tarot. Para trocar o vídeo principal, atualize `data-youtube` (ID), título e descrição em `index.html`. As capas WebP ficam em `assets/images/thiago/`; o conteúdo original é carregado no diálogo somente após um clique. Há também um link direto para cada publicação, caso o Instagram solicite login ou não exiba a incorporação.
 
 A seleção é manual e não atualiza automaticamente com novos posts. Para trocar um conteúdo, atualize o endereço em `data-instagram` e no link do cartão, além da capa, do título e da descrição em `index.html`. Não há token, plugin pago ou conta de terceiros.
 

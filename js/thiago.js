@@ -52,6 +52,9 @@ document.querySelectorAll('[data-instagram]').forEach(button => {
     const original = new URL(button.dataset.instagram);
     if (original.origin !== 'https://www.instagram.com') return;
     instagramOpener = button;
+    instagramDialog.classList.remove('youtube-mode');
+    document.querySelector('.instagram-notice').textContent = 'Conteúdo carregado do Instagram. Se não aparecer, abra a publicação pelo link abaixo.';
+    document.querySelector('#instagram-original').textContent = 'Abrir no Instagram';
     document.querySelector('#instagram-title').textContent = button.dataset.title;
     document.querySelector('#instagram-original').href = original.href;
     const iframe = document.createElement('iframe');
@@ -76,4 +79,28 @@ instagramDialog.addEventListener('close', () => {
   instagramPlayer.replaceChildren();
   document.body.style.overflow = '';
   instagramOpener?.focus();
+});
+
+// No player is loaded until a visitor chooses to watch.
+document.querySelectorAll('[data-youtube]').forEach(button => {
+  button.addEventListener('click', () => {
+    const videoId = button.dataset.youtube;
+    if (!/^[A-Za-z0-9_-]{11}$/.test(videoId)) return;
+    instagramOpener = button;
+    instagramDialog.classList.add('youtube-mode');
+    document.querySelector('#instagram-title').textContent = button.dataset.title;
+    document.querySelector('.instagram-notice').textContent = 'Assista por aqui ou abra o vídeo diretamente no YouTube.';
+    const original = document.querySelector('#instagram-original');
+    original.href = `https://www.youtube.com/watch?v=${videoId}`;
+    original.textContent = 'Abrir no YouTube';
+    const iframe = document.createElement('iframe');
+    iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?rel=0`;
+    iframe.title = `${button.dataset.title} — Thiago Sousa no YouTube`;
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    iframe.allowFullscreen = true;
+    iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+    instagramPlayer.replaceChildren(iframe);
+    instagramDialog.showModal();
+    document.body.style.overflow = 'hidden';
+  });
 });
