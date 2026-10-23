@@ -209,3 +209,81 @@ if (catalog && servicePanel && serviceTabs.length === 2) {
   window.addEventListener('hashchange', syncServiceHash);
   syncServiceHash();
 }
+
+// Feedbacks: native touch scrolling, keyboard navigation and optional rotation.
+const feedbackCarousel = document.querySelector('.testimonial-carousel');
+if (feedbackCarousel) {
+  const track = feedbackCarousel.querySelector('.testimonial-track');
+  const slides = [...track.querySelectorAll('.testimonial')];
+  const play = document.querySelector('#feedback-play');
+  const position = document.querySelector('#feedback-position');
+  const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let automatic = !motionPreference.matches;
+  let inView = false;
+  let hovering = false;
+  let focused = false;
+  let rotationTimer;
+  let scrollFrame;
+  const geometry = () => {
+    const step = slides.length > 1 ? slides[1].offsetLeft - slides[0].offsetLeft : track.clientWidth;
+    const last = Math.max(0, track.scrollWidth - track.clientWidth);
+    const start = Math.min(slides.length - 1, Math.max(0, Math.round(track.scrollLeft / step)));
+    return {step, last, start};
+  };
+  const updatePosition = () => {
+    const {step, start} = geometry();
+    const visible = Math.max(1, Math.floor((track.clientWidth + 22) / step));
+    const end = Math.min(slides.length, start + visible);
+    position.textContent = (end > start + 1 ? `${start + 1}–${end}` : String(start + 1)) + ` de ${slides.length}`;
+  };
+  const move = direction => {
+    const {step, last} = geometry();
+    let target = track.scrollLeft + direction * step;
+    if (direction > 0 && track.scrollLeft >= last - 3) target = 0;
+    else if (direction < 0 && track.scrollLeft <= 3) target = last;
+    track.scrollTo({left: Math.min(last, Math.max(0, target)), behavior: motionPreference.matches ? 'auto' : 'smooth'});
+  };
+  const scheduleRotation = () => {
+    clearTimeout(rotationTimer);
+    play.textContent = automatic ? 'Pausar' : 'Reproduzir';
+    play.setAttribute('aria-label', automatic ? 'Pausar alternância automática dos feedbacks' : 'Iniciar alternância automática dos feedbacks');
+    if (automatic && inView && !hovering && !focused && !document.hidden) {
+      rotationTimer = setTimeout(() => { move(1); scheduleRotation(); }, 8000);
+    }
+  };
+  const stopRotation = () => { automatic = false; scheduleRotation(); };
+  document.querySelector('#feedback-prev').addEventListener('click', () => { stopRotation(); move(-1); });
+  document.querySelector('#feedback-next').addEventListener('click', () => { stopRotation(); move(1); });
+  play.addEventListener('click', () => { automatic = !automatic; focused = false; scheduleRotation(); });
+  track.addEventListener('pointerdown', stopRotation, {passive:true});
+  track.addEventListener('wheel', stopRotation, {passive:true});
+  track.addEventListener('scroll', () => {
+    cancelAnimationFrame(scrollFrame);
+    scrollFrame = requestAnimationFrame(updatePosition);
+  }, {passive:true});
+  track.addEventListener('keydown', event => {
+    if (!['ArrowLeft','ArrowRight','Home','End'].includes(event.key)) return;
+    event.preventDefault(); stopRotation();
+    if (event.key === 'Home' || event.key === 'End') {
+      track.scrollTo({left:event.key === 'Home' ? 0 : geometry().last,behavior:motionPreference.matches ? 'auto' : 'smooth'});
+    } else move(event.key === 'ArrowRight' ? 1 : -1);
+  });
+  feedbackCarousel.addEventListener('mouseenter', () => { hovering = true; scheduleRotation(); });
+  feedbackCarousel.addEventListener('mouseleave', () => { hovering = false; scheduleRotation(); });
+  feedbackCarousel.addEventListener('focusin', () => { focused = true; scheduleRotation(); });
+  feedbackCarousel.addEventListener('focusout', () => {
+    requestAnimationFrame(() => { focused = feedbackCarousel.contains(document.activeElement); scheduleRotation(); });
+  });
+  document.addEventListener('visibilitychange', scheduleRotation);
+  motionPreference.addEventListener('change', () => { if (motionPreference.matches) stopRotation(); });
+  window.addEventListener('resize', updatePosition);
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      inView = entries[0].isIntersecting;
+      scheduleRotation();
+    }, {threshold:.25});
+    observer.observe(feedbackCarousel);
+  } else inView = true;
+  feedbackCarousel.querySelector('.feedback-controls').hidden = false;
+  updatePosition(); scheduleRotation();
+}
