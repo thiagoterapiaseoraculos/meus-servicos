@@ -1,3 +1,16 @@
+// Keep public URLs clean while preserving meaningful section links and campaign tags.
+function cleanPageAddress() {
+  const url = new URL(window.location.href);
+  const reviewParameters = ['v', 'preview', 'revisao', 'analise', 'versao'];
+  reviewParameters.forEach(parameter => url.searchParams.delete(parameter));
+  if (url.hash === '#inicio') url.hash = '';
+  if (url.href !== window.location.href) {
+    window.history.replaceState(window.history.state, '', url.pathname + url.search + url.hash);
+  }
+}
+cleanPageAddress();
+window.addEventListener('hashchange', cleanPageAddress);
+
 const dialog = document.querySelector('#art-dialog');
 const artImage = document.querySelector('#art-image');
 const frame = document.querySelector('.art-frame');

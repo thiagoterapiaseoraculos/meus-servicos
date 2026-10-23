@@ -1,95 +1,69 @@
 # Thiago Sousa · Terapias & Oráculos
 
-Site pessoal de Thiago Sousa, independente da Casa de Umbanda Luz de Oxalá.
-
-Desenvolvido em HTML, CSS e JavaScript estáticos, sem instalação de dependências ou etapa de build.
+Site profissional independente da Casa de Umbanda Luz de Oxalá. HTML, CSS e JavaScript estáticos, sem instalação de dependências ou etapa de build.
 
 ## Endereços
 
-- Site: https://thiagoterapiaseoraculos.github.io/meus-servicos/
+- Site para divulgação: https://thiagoterapiaseoraculos.github.io/meus-servicos/
 - Repositório: https://github.com/thiagoterapiaseoraculos/meus-servicos
 - Instagram: https://www.instagram.com/thiago.terapiaseoraculos/
+- YouTube: https://www.youtube.com/@thiagocaprino5149
 
-## Conteúdo
+O nome do repositório é `meus-servicos`. Compartilhe o endereço do site acima. Parâmetros antigos de revisão (`v`, `preview`, `revisao`, `analise` e `versao`) são retirados da barra de endereço ao abrir a página. O fragmento `#inicio` também é retirado. Links para seções, como `#atendimentos`, continuam disponíveis.
 
-Oito atendimentos com descrição, apresentação visual e links específicos para consulta pelo WhatsApp:
+## Organização dos arquivos
 
-1. Oráculos
-2. Mentoria espiritual
-3. Atendimento espiritual
-4. Leitura astrológica — mapa astral
-5. ThetaHealing
-6. Terapias vibracionais e xamânicas
-7. Constelação sistêmica
-8. Mesa radiônica
+```text
+index.html
+assets/
+  css/site.css
+  js/site.js
+  fonts/
+  images/
+    marca/
+    perfil/
+    atendimentos/
+    conteudos/
+manifest.json
+robots.txt
+sitemap.xml
+sw.js
+LICENSE.md
+README.md
+```
 
-O site também reúne apresentação de Thiago, Instagram, YouTube, dúvidas frequentes e compartilhamento.
+- `index.html`: textos, oito serviços, contato e conteúdos selecionados.
+- `assets/css/site.css`: identidade visual e adaptação ao celular.
+- `assets/js/site.js`: apresentações, vídeos, compartilhamento e contato móvel.
+- `assets/fonts/`: fontes locais utilizadas pelo site.
+- `assets/images/marca/`: símbolo da identidade.
+- `assets/images/perfil/`: apresentação de Thiago.
+- `assets/images/atendimentos/`: materiais originais dos oito serviços.
+- `assets/images/conteudos/`: capas das publicações selecionadas.
+- `sw.js`: desativa o cache offline herdado do modelo anterior.
 
-Valores, disponibilidade e condições dos atendimentos são informados diretamente pelo WhatsApp.
+As páginas de prévia e os arquivos sem uso do modelo original foram retirados da versão atual. As alterações são aplicadas diretamente ao site oficial, após conferência, com cópia de recuperação. As fotografias e artes fornecidas foram preservadas, apenas realocadas.
 
-## Estrutura
+## Conteúdo e atendimento
 
-- Página principal: `index.html`
-- Design responsivo: `assets/css/thiago.css`
-- Interações: `js/thiago.js`
-- Fotografias e apresentações: `assets/images/thiago/`
-- Identificação do site: `manifest.json`
-- Indexação: `robots.txt` e `sitemap.xml`
+A abertura oferece contato direto pelo WhatsApp. Como agendar aparece antes dos serviços, com ajuda para quem ainda não sabe qual escolher. Dúvidas e contato aparecem antes dos conteúdos sociais. No celular, o atalho de WhatsApp se oculta quando o contato principal ou final está visível.
 
-Os materiais fornecidos foram preservados. O enquadramento das apresentações é feito no CSS para ocultar a interface do Instagram.
+A seleção de Instagram e YouTube é manual. Os players são carregados após um clique; há links para abrir os conteúdos nas plataformas de origem. Para trocar o vídeo principal, edite `data-youtube`, título e descrição. Para trocar uma publicação, atualize `data-instagram`, o link do cartão e a capa correspondente.
 
-## Publicação
+Modalidade, duração, valores, localização, formação e condições de agendamento aguardam confirmação pela ficha Projeto site. A ficha e suas respostas não ficam no repositório público.
 
-Em Settings → Pages → Build and deployment:
+## Publicação e manutenção
 
-| Campo | Valor |
-| --- | --- |
-| Source | Deploy from a branch |
-| Branch | main |
-| Pasta | /(root) |
+Em Settings → Pages, use Deploy from a branch, branch `main`, pasta `/(root)` e Custom domain vazio.
 
-Para utilizar o endereço padrão do GitHub Pages, mantenha Custom domain vazio.
+As alterações na branch principal são publicadas automaticamente. Os parâmetros de versão nos arquivos CSS e JavaScript são internos e não aparecem no link de divulgação. Atualize-os ao mudar esses arquivos, para evitar estilos ou interações antigos no cache.
 
-As alterações salvas na branch main são publicadas automaticamente. Acompanhe o processamento na aba Actions.
-
-## Manutenção dos endereços
-
-Endereço principal:
-
-https://thiagoterapiaseoraculos.github.io/meus-servicos/
-
-Se o domínio ou o nome do repositório mudar, atualize:
-
-- `index.html`: canonical, Open Graph e JSON-LD;
-- `robots.txt`: endereço do sitemap;
-- `sitemap.xml`: endereço da página;
-- `README.md`: documentação.
-
-O compartilhamento usa automaticamente o endereço da página aberta. Os links internos e arquivos usam caminhos relativos.
-
-## Conteúdos do YouTube e Instagram
-
-A seção `#conteudos`, após a apresentação de Thiago, reúne um vídeo do YouTube em destaque e três publicações selecionadas do Instagram. O destaque usa uma capa editorial em HTML/CSS, com título do vídeo, e o player do YouTube com privacidade aprimorada só é carregado após um clique. Há também dois links para conversas de astrologia e tarot. Para trocar o vídeo principal, atualize `data-youtube` (ID), título e descrição em `index.html`. As capas WebP ficam em `assets/images/thiago/`; o conteúdo original é carregado no diálogo somente após um clique. Há também um link direto para cada publicação, caso o Instagram solicite login ou não exiba a incorporação.
-
-A seleção é manual e não atualiza automaticamente com novos posts. Para trocar um conteúdo, atualize o endereço em `data-instagram` e no link do cartão, além da capa, do título e da descrição em `index.html`. Não há token, plugin pago ou conta de terceiros.
-
-## Organização para contato e agendamento
-
-A abertura descreve a oferta e dá acesso direto ao WhatsApp. As orientações de agendamento aparecem antes dos atendimentos. Um botão específico ajuda quem ainda não escolheu um serviço. Dúvidas e contato aparecem antes dos conteúdos sociais. No celular, o acesso fixo ao WhatsApp é ocultado quando o contato principal ou final está visível.
-
-Valores, modalidade, duração, localização, formação e condições de agendamento aguardam confirmação de Thiago na ficha Projeto site. Não foram preenchidos por suposição. O site continua estático e não coleta respostas da ficha.
+Se o endereço público mudar, revise canonical, Open Graph e JSON-LD em `index.html`, além de `robots.txt`, `sitemap.xml` e esta documentação. Os caminhos internos são relativos.
 
 ## Recuperação
 
-O histórico Git preserva as versões anteriores, inclusive as anteriores à transferência da conta.
-
-- Antes do redesenho: `96b22e7c809cfc892fe29ad217fb0757b85e4b82`
-- Redesenho com os oito atendimentos: `1294693950f0c5ff0955304dc9bb67d583349a3a`
-
-Mantenha também uma cópia ZIP do site para recuperação.
+O histórico Git e as branches `backup/` preservam as revisões anteriores. Antes da organização das pastas, a versão era `3b1065a43f66a94445a0d75b1e52d809ac0bad38`; ela também está em `backup/antes-estrutura-2026-10-23`.
 
 ## Créditos
 
-Preservada a licença MIT do modelo original em `LICENSE.md`.
-
-As fotografias e artes fornecidas para esta página mantêm seus respectivos direitos.
+Preservada a licença MIT do modelo original em `LICENSE.md`. Fotografias e artes fornecidas mantêm seus respectivos direitos.
