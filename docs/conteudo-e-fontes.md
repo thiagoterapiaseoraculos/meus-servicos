@@ -3,7 +3,7 @@
 ## Materiais utilizados
 
 - Foto.pdf: fonte para leitura, sem incorporar páginas ou capturas ao site.
-- IMG_6552.jpeg: candidata para a biografia; não incorporada, publicação da imagem pendente de autorização.
+- IMG_6552.jpeg: arte original da caminhada espiritual, publicada sem alterações após autorização expressa do usuário em 23/10/2026. Também fundamenta os 20 anos de caminhada espiritual e a atuação como pai de santo e dirigente da Casa de Umbanda Luz de Oxalá.
 - IMG_6557.jpeg: prazo de retorno em até 24 horas.
 - IMG_6558.jpeg: não incorporada à versão publicada.
 - PDF, páginas 21 e 22: apoio para ampliar a apresentação simbólica da leitura astrológica.
