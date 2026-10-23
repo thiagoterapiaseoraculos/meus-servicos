@@ -67,6 +67,12 @@ Se o domínio ou o nome do repositório mudar, atualize:
 
 O compartilhamento usa automaticamente o endereço da página aberta. Os links internos e arquivos usam caminhos relativos.
 
+## Conteúdos do Instagram
+
+A seção `#conteudos`, após a apresentação de Thiago, mostra três publicações selecionadas. As capas WebP ficam em `assets/images/thiago/`; o conteúdo original é carregado no diálogo somente após um clique. Há também um link direto para cada publicação, caso o Instagram solicite login ou não exiba a incorporação.
+
+A seleção é manual e não atualiza automaticamente com novos posts. Para trocar um conteúdo, atualize o endereço em `data-instagram` e no link do cartão, além da capa, do título e da descrição em `index.html`. Não há token, plugin pago ou conta de terceiros.
+
 ## Recuperação
 
 O histórico Git preserva as versões anteriores, inclusive as anteriores à transferência da conta.

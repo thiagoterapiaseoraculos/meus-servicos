@@ -42,3 +42,37 @@ if ('serviceWorker' in navigator) navigator.serviceWorker.getRegistrations().the
     if (worker && new URL(worker.scriptURL).pathname === new URL('./sw.js', location.href).pathname) registration.update().catch(() => {});
   });
 }).catch(() => {});
+
+// Only contact Instagram after a visitor chooses a publication.
+const instagramDialog = document.querySelector('#instagram-dialog');
+const instagramPlayer = document.querySelector('#instagram-player');
+let instagramOpener;
+document.querySelectorAll('[data-instagram]').forEach(button => {
+  button.addEventListener('click', () => {
+    const original = new URL(button.dataset.instagram);
+    if (original.origin !== 'https://www.instagram.com') return;
+    instagramOpener = button;
+    document.querySelector('#instagram-title').textContent = button.dataset.title;
+    document.querySelector('#instagram-original').href = original.href;
+    const iframe = document.createElement('iframe');
+    iframe.src = `${original.href}embed/`;
+    iframe.title = `${button.dataset.title} — Instagram de Thiago Sousa`;
+    iframe.allow = 'autoplay; encrypted-media; fullscreen; picture-in-picture';
+    iframe.allowFullscreen = true;
+    iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+    instagramPlayer.replaceChildren(iframe);
+    instagramDialog.showModal();
+    document.body.style.overflow = 'hidden';
+  });
+});
+document.querySelector('#close-instagram').addEventListener('click', () => instagramDialog.close());
+instagramDialog.addEventListener('click', event => {
+  if (event.target !== instagramDialog) return;
+  const rect = instagramDialog.getBoundingClientRect();
+  if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) instagramDialog.close();
+});
+instagramDialog.addEventListener('close', () => {
+  instagramPlayer.replaceChildren();
+  document.body.style.overflow = '';
+  instagramOpener?.focus();
+});
