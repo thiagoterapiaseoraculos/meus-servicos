@@ -138,3 +138,74 @@ if (mobileContact && heroActions && contactSection) {
     observer.observe(contactSection);
   } else mobileContact.hidden = false;
 }
+
+// Reuse the prices displayed on the service cards as the catalog's only source.
+const catalog = document.querySelector('#valores');
+const servicePanel = document.querySelector('#services-panel');
+const serviceTabs = [...document.querySelectorAll('.offerings-tabs [role="tab"]')];
+if (catalog && servicePanel && serviceTabs.length === 2) {
+  const groups = document.createDocumentFragment();
+  servicePanel.querySelectorAll('.service').forEach(card => {
+    const group = document.createElement('article');
+    group.className = 'catalog-group' + (card.id === 'mentoria' ? ' catalog-package' : '');
+    const title = document.createElement('h4');
+    title.textContent = card.querySelector('h3').textContent;
+    group.append(title);
+    const prices = card.querySelector('.price-list');
+    if (prices) {
+      group.append(prices.cloneNode(true));
+      card.querySelectorAll('.price-note').forEach(note => group.append(note.cloneNode(true)));
+    } else {
+      const note = document.createElement('p');
+      note.className = 'catalog-consult';
+      note.textContent = 'Valor e modalidades sob consulta. Converse comigo para conhecer a proposta e a disponibilidade.';
+      group.append(note);
+    }
+    const contact = card.querySelector('.service-contact').cloneNode(true);
+    contact.className = 'text-link';
+    contact.setAttribute('aria-label', 'Consultar agenda: ' + title.textContent);
+    group.append(contact);
+    groups.append(group);
+  });
+  catalog.querySelector('.catalog-grid').append(groups);
+  document.querySelector('.offerings-tabs').hidden = false;
+  const selectServiceTab = (index, updateAddress = false) => {
+    serviceTabs.forEach((tab, i) => {
+      tab.setAttribute('aria-selected', String(i === index));
+      tab.tabIndex = i === index ? 0 : -1;
+    });
+    servicePanel.hidden = index === 1;
+    catalog.hidden = index === 0;
+    if (updateAddress) {
+      const address = new URL(location.href);
+      address.hash = index === 1 ? 'valores' : 'atendimentos';
+      history.replaceState(history.state, '', address.pathname + address.search + address.hash);
+    }
+  };
+  serviceTabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => selectServiceTab(index, true));
+    tab.addEventListener('keydown', event => {
+      let next;
+      if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') next = 1 - index;
+      else if (event.key === 'Home') next = 0;
+      else if (event.key === 'End') next = 1;
+      else return;
+      event.preventDefault();
+      selectServiceTab(next, true);
+      serviceTabs[next].focus();
+    });
+  });
+  const syncServiceHash = () => {
+    if (location.hash === '#valores') {
+      selectServiceTab(1);
+      document.querySelector('.offerings-tabs').scrollIntoView({block:'start'});
+    } else if (location.hash === '#atendimentos' || [...servicePanel.querySelectorAll('.service')].some(card => '#' + card.id === location.hash)) {
+      selectServiceTab(0);
+    }
+  };
+  document.querySelectorAll('a[href="#valores"]').forEach(link => link.addEventListener('click', () => {
+    selectServiceTab(1);
+  }));
+  window.addEventListener('hashchange', syncServiceHash);
+  syncServiceHash();
+}
