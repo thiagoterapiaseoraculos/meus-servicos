@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://soneka-ox.github.io/thiago.sousa/sitemap.xml
+Sitemap: https://thiagoterapiaseoraculos.github.io/meus-servicos/sitemap.xml
