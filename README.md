@@ -73,6 +73,12 @@ A seção `#conteudos`, após a apresentação de Thiago, reúne um vídeo do Yo
 
 A seleção é manual e não atualiza automaticamente com novos posts. Para trocar um conteúdo, atualize o endereço em `data-instagram` e no link do cartão, além da capa, do título e da descrição em `index.html`. Não há token, plugin pago ou conta de terceiros.
 
+## Organização para contato e agendamento
+
+A abertura descreve a oferta e dá acesso direto ao WhatsApp. As orientações de agendamento aparecem antes dos atendimentos. Um botão específico ajuda quem ainda não escolheu um serviço. Dúvidas e contato aparecem antes dos conteúdos sociais. No celular, o acesso fixo ao WhatsApp é ocultado quando o contato principal ou final está visível.
+
+Valores, modalidade, duração, localização, formação e condições de agendamento aguardam confirmação de Thiago na ficha Projeto site. Não foram preenchidos por suposição. O site continua estático e não coleta respostas da ficha.
+
 ## Recuperação
 
 O histórico Git preserva as versões anteriores, inclusive as anteriores à transferência da conta.

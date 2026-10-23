@@ -104,3 +104,24 @@ document.querySelectorAll('[data-youtube]').forEach(button => {
     document.body.style.overflow = 'hidden';
   });
 });
+
+// Keep contact within reach after the main call to action leaves the screen.
+const mobileContact = document.querySelector('.mobile-contact');
+const heroActions = document.querySelector('.hero-actions');
+const contactSection = document.querySelector('#contato');
+if (mobileContact && heroActions && contactSection) {
+  let heroContactVisible = false;
+  let finalContactVisible = false;
+  const updateMobileContact = () => { mobileContact.hidden = heroContactVisible || finalContactVisible; };
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.target === heroActions) heroContactVisible = entry.isIntersecting;
+        if (entry.target === contactSection) finalContactVisible = entry.isIntersecting;
+      });
+      updateMobileContact();
+    }, { threshold: 0 });
+    observer.observe(heroActions);
+    observer.observe(contactSection);
+  } else mobileContact.hidden = false;
+}
