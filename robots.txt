@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://anuswarrrao.sbs/sitemap.xml
+Sitemap: https://soneka-ox.github.io/thiago.sousa/sitemap.xml

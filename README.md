@@ -1,103 +1,39 @@
-# 🔗 freelink-bio
+# Thiago Sousa · Terapias & Oráculos
 
-![Preview of freelink-bio Website](https://raw.githubusercontent.com/Anuswar/linktree-clone/main/assets/images/preview.jpg)
+Site pessoal independente da Casa de Umbanda Luz de Oxalá. HTML, CSS e JavaScript estáticos, sem instalação ou etapa de build. Preparado para GitHub Pages no caminho `/thiago.sousa/`.
 
-<div align="center">
+## Conteúdo
 
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)](https://www.w3.org/html/)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)](https://www.w3.org/Style/CSS/Overview.en.html)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=flat&logo=google-chrome&logoColor=white)](https://anuswarrrao.sbs/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.md)
-[![Last Commit](https://img.shields.io/github/last-commit/Anuswar/linktree-clone)](https://github.com/Anuswar/linktree-clone/commits/main)
+Oito atendimentos com descrição, apresentação visual e links específicos de consulta pelo WhatsApp. Apresentação de Thiago, Instagram, YouTube, dúvidas frequentes e compartilhamento nativo ou cópia de link.
 
-</div>
+- Página: `index.html`
+- Design responsivo: `assets/css/thiago.css`
+- Interações: `js/thiago.js`
+- Materiais fornecidos: `assets/images/thiago/`
 
+Os materiais enviados foram preservados. O enquadramento das apresentações é feito no CSS para ocultar a interface do Instagram. Não foram inventados preços, certificações, depoimentos ou formatos de atendimento. As artes originais ficam disponíveis nos detalhes dos serviços.
 
-I got really frustrated with modern “link-in-bio” platforms. All their basic features were pushed behind paywalls. So I built my own — a clean, fast, modern, black space-themed link-in-bio page. It's fully self-hosted and completely free forever.
+## Publicação no GitHub Pages
 
+Em **Settings → Pages → Build and deployment**, usar **Deploy from a branch**, branch **main**, pasta **/(root)**. O endereço esperado é:
 
+https://soneka-ox.github.io/thiago.sousa/
 
-## ✨ Features
+O `CNAME` copiado do modelo (`anuswarrrao.sbs`) foi removido; esse domínio não pertence a esta identidade. Se esse domínio ainda aparecer em **Custom domain**, removê-lo nas configurações do Pages.
 
-- **Dark/Light Mode Toggle**
-- **AOS Scroll Animations**
-- **Offline-ready PWA (Workbox)**
-- **Lucide UI icons**
-- **Fully Responsive Design**
-Smart Share Button on Every Link (Just like Instagram)
-    - QR Code Preview
-    - Native System Share
-    - Copy to Clipboard
-    - Download QR Code Image
-- **Support for Contact Links**
-    - Email
-    - Phone / WhatsApp
-    - Discord, GitHub, LinkedIn, etc.
+Para um endereço sem `soneka-ox`:
 
+1. Usar um domínio próprio, por exemplo `thiagoterapiaseoraculos.com.br` (exemplo; disponibilidade e registro não verificados).
+2. Ou publicar em uma conta/organização dedicada, por exemplo `thiagoterapiaseoraculos.github.io` (nome ilustrativo; disponibilidade não verificada).
 
-## 🛠️ Installation
+Renomear só o repositório altera apenas o trecho após `github.io/`. Não altera o dono da conta. Não é necessário alterar a conta existente nem afetar outros projetos.
 
-### 1. **Clone the repository:**
+Se mudar o endereço definitivo, atualizar canonical, Open Graph, JSON-LD, robots.txt e sitemap.xml; o compartilhamento usa automaticamente o endereço da página aberta.
 
-```bash
-git clone https://github.com/anuswarrrao/freelink-bio.git
-cd freelink-bio-main
-```
+## Recuperação
 
-### 2. **Open the project using Live Server:**
+O histórico Git preserva a versão anterior. Antes do redesenho, o commit principal era `96b22e7c809cfc892fe29ad217fb0757b85e4b82`. O arquivo ZIP exportado dessa revisão restaura o estado anterior sem depender da versão publicada.
 
-   - Install the [Live Server extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) in VS Code
-   - Right-click on `index.html` and select "Open with Live Server"
-   - The project will open in your browser
+## Créditos
 
-
-
-## 📂 Project Structure
-
-```
-freelink-bio/
-│
-├── LICENSE.md               # MIT license file
-├── README.md                # Project documentation
-├── index.html               # Main HTML page
-├── sw.js                    # Workbox service worker
-├── manifest.json            # PWA web app manifest
-├── CNAME                    # GitHub Pages custom domain (optional)
-│
-├── assets/                  # Static assets directory
-│   ├── css/
-│   │   └── styles.css       # Main stylesheet
-│   └── images/
-│       ├── favicon/         # Favicon files for all platforms
-│       ├── icon/            # Lucide UI icons + brand social SVGs
-│       ├── anuswar-rao-profile-photo.webp  # Profile photo
-│       └── preview.jpg      # Social media preview image
-│
-├── js/                      # JavaScript modules
-│   ├── app.js               # Main application script
-│   └── modules/             # Modular JS components
-│
-└── libraries/               # Third-party libraries
-    ├── aos/                 # Animate On Scroll (AOS)
-    ├── google-font/         # Self-hosted Nunito font files
-    ├── toastify/            # Toast notification library
-    ├── workbox/             # Self-hosted Workbox (PWA)
-    └── qrcode.min.js        # QR code generation library
-```
-
-
-## 🧰 Tech Stack
-
-| Tool / Library    | Purpose                          |
-|-------------------|----------------------------------|
-| **HTML, CSS, JS** | Core Structure & Functionality   |
-| Google Fonts      | Custom Typography (Nunito)       |
-| AOS               | Scroll Animations                |
-| Lucide            | UI icons (self-hosted SVGs)      |
-| Workbox           | Offline caching / service worker |
-| QRCode.js         | QR Code Generation               |
-| Toastify.js       | Toast Notifications              |
-
-## 📄 License
-This project is licensed under the [MIT License](LICENSE.md), which means you are free to use, modify, and distribute the code.
+Preservada a licença MIT do modelo original em `LICENSE.md`. As fotografias e artes fornecidas para esta página mantêm seus respectivos direitos.
