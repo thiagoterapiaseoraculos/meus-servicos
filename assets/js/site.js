@@ -20,6 +20,7 @@ document.querySelectorAll('[data-art]').forEach(button => {
     opener = button;
     document.querySelector('#art-title').textContent = button.dataset.title;
     artImage.src = button.dataset.art;
+    document.querySelector('.art-caption').textContent = button.dataset.art.includes('/perfil/') ? 'Uma imagem da caminhada espiritual de Thiago.' : 'Material de apresentação do atendimento.';
     artImage.alt = `Apresentação de ${button.dataset.title}, na identidade visual de Thiago Terapias & Oráculos`;
     frame.classList.toggle('wide', button.dataset.wide === 'true');
     dialog.showModal();

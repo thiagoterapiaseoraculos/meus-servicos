@@ -50,7 +50,7 @@ A abertura oferece contato direto pelo WhatsApp. Como agendar aparece antes dos 
 
 A seleção de Instagram e YouTube é manual. Os players são carregados após um clique; há links para abrir os conteúdos nas plataformas de origem. Para trocar o vídeo principal, edite `data-youtube`, título e descrição. Para trocar uma publicação, atualize `data-instagram`, o link do cartão e a capa correspondente.
 
-Modalidade, duração, valores, localização, formação e condições de agendamento aguardam confirmação pela ficha Projeto site. A ficha e suas respostas não ficam no repositório público.
+Valores e modalidades já confirmados estão publicados nos respectivos serviços. Duração, formação e condições ainda não confirmadas devem ser preenchidas na ficha Projeto site. A ficha e suas respostas não ficam no repositório público.
 
 ## Publicação e manutenção
 
@@ -67,3 +67,11 @@ O histórico Git e as branches `backup/` preservam as revisões anteriores. Ante
 ## Créditos
 
 Preservada a licença MIT do modelo original em `LICENSE.md`. Fotografias e artes fornecidas mantêm seus respectivos direitos.
+
+## Manutenção por planilha
+
+O projeto e as instruções estão em [docs/manutencao-por-planilha.md](docs/manutencao-por-planilha.md). A integração ainda não está conectada; a edição de uma planilha não altera esta versão do site.
+
+## Revisão final — 24/10/2026
+
+Oito serviços, treze valores confirmados e doze relatos. A abertura informa online e Brasília; a mentoria identifica a sessão única; a FAQ explica os dados do mapa astral; o rodapé inclui acesso direto a valores e contato. Navegação compactada em telas intermediárias e muito pequenas, com foco visível também nos fundos claros.
