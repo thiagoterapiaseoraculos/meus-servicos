@@ -75,3 +75,7 @@ O projeto e as instruções estão em [docs/manutencao-por-planilha.md](docs/man
 ## Revisão final — 24/10/2026
 
 Oito serviços, treze valores confirmados e doze relatos. A abertura informa online e Brasília; a mentoria identifica a sessão única; a FAQ explica os dados do mapa astral; o rodapé inclui acesso direto a valores e contato. Navegação compactada em telas intermediárias e muito pequenas, com foco visível também nos fundos claros.
+
+## Página para a bio
+
+`links/` reúne atendimentos, WhatsApp, e-book gratuito, vídeo Água Flórida e redes sociais. O download é livre. O PDF está em `assets/downloads/agua-florida-boas-vindas.pdf`; fontes e critérios editoriais em `docs/ebook-agua-florida.md`.
