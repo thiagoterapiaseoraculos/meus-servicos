@@ -8,3 +8,9 @@ O PDF é um guia introdutório de acompanhamento, não uma transcrição literal
 A página de cuidados foi adicionada editorialmente com referências públicas da Anvisa sobre inflamabilidade do álcool e reações a cosméticos. Links clicáveis no PDF. Download livre sem coleta de dados; seguir e divulgar são voluntários. Nenhuma chave Pix da Casa foi incorporada: este projeto é profissional e independente.
 
 O vídeo bruto e as transcrições de trabalho não são incorporados ao repositório. A publicação original continua acessível pela página e pelo e-book.
+
+## Revisão: manual em primeira pessoa
+
+O e-book foi refeito em 8 páginas, com a voz de Thiago, ingredientes e seis etapas de preparo. Medidas conferidas nas legendas e na transcrição: 600 ml de álcool de cereais, 400 ml de água destilada, 24 gotas de lavanda (legenda visual em 02:01–02:02), 1½ tampinha de laranja-doce, 1 tampinha de alecrim, 2 tampinhas de bergamota, 3 galhinhos de alecrim, 3 a 4 pedaços de casca de laranja, 1 pedaço de canela e 7 cravos sem a parte arredondada. Tampinhas não foram convertidas para mililitros e não foram tratadas como medidas universais de óleos essenciais. Maceração de 10 a 15 dias. As medidas registram o preparo mostrado, sem validação de fórmula cosmética.
+
+A thumb original foi incorporada ao PDF e fotografias foram extraídas do vídeo fornecido pelo usuário. Foram adicionadas na página uma foto de Thiago, uma prévia da capa do manual e a capa original do vídeo. A referência adicional de layout mencionada pelo usuário ainda não chegou como imagem ou URL; não se afirma que o layout segue uma referência não recebida.
