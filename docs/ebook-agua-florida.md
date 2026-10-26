@@ -26,3 +26,7 @@ A capa passou a usar “Presente de boas-vindas”. Avisos antes dispersos no pr
 ## Anotações finais do usuário
 
 Na página 7, foram removidos o título das referências de cuidados e os dois links da Anvisa, conforme as três marcações de exclusão. No mesmo espaço foi incluído um aviso para realizar teste de sensibilidade antes do uso, com orientação profissional. Permanecem os demais cuidados da página 6 e as sete páginas do presente.
+
+## Identificação dos aromas conforme o vídeo
+
+Conferência da transcrição e das legendas entre 01:49 e 02:32: o vídeo menciona essências e óleos essenciais em geral. Laranja-doce é explicitamente identificada como óleo essencial; alecrim é apresentado como óleo ou essência; bergamota é chamada apenas de óleo; lavanda não tem o tipo especificado. A tabela e a etapa 2 passaram a refletir essas distinções, sem presumir composição, concentração ou equivalência entre produtos.
