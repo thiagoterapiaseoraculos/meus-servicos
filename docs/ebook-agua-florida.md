@@ -30,3 +30,7 @@ Na página 7, foram removidos o título das referências de cuidados e os dois l
 ## Identificação dos aromas conforme o vídeo
 
 Conferência da transcrição e das legendas entre 01:49 e 02:32: o vídeo menciona essências e óleos essenciais em geral. Laranja-doce é explicitamente identificada como óleo essencial; alecrim é apresentado como óleo ou essência; bergamota é chamada apenas de óleo; lavanda não tem o tipo especificado. A tabela e a etapa 2 passaram a refletir essas distinções, sem presumir composição, concentração ou equivalência entre produtos.
+
+## Nomenclatura solicitada pelo usuário
+
+Por instrução expressa do usuário, os quatro aromas foram nomeados como óleos essenciais na tabela e na etapa 2. Essa definição editorial não foi apresentada como confirmação adicional do vídeo, cuja fala permanece ambígua para parte dos produtos. A nota explicativa agora ressalta que as medidas registram os frascos da demonstração e que a composição, a concentração e a diluição precisam ser confirmadas.
