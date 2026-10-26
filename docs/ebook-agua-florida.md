@@ -22,3 +22,7 @@ A página ganhou uma transição por máscaras CSS entre a parte superior da art
 ## Presente de boas-vindas: revisão de texto
 
 A capa passou a usar “Presente de boas-vindas”. Avisos antes dispersos no preparo foram reunidos em “Antes de usar”, preservando os cuidados com álcool, pele, armazenamento e diferenças de concentração e medidas. As referências da Anvisa aparecem apenas na última página, sob “Referências quanto aos cuidados”. O crédito agora informa o conteúdo autoral de Thiago Sousa e o passo a passo conforme o vídeo publicado em suas redes, com a indicação “Publicado em outubro de 2026”. Foram retiradas as menções ao crédito da capa e à edição. A quantidade permanece em 7 páginas.
+
+## Anotações finais do usuário
+
+Na página 7, foram removidos o título das referências de cuidados e os dois links da Anvisa, conforme as três marcações de exclusão. No mesmo espaço foi incluído um aviso para realizar teste de sensibilidade antes do uso, com orientação profissional. Permanecem os demais cuidados da página 6 e as sete páginas do presente.
