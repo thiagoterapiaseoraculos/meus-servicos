@@ -18,3 +18,7 @@ A thumb original foi incorporada ao PDF e fotografias foram extraídas do vídeo
 ## Revisão visual: retrato e thumb original
 
 A página ganhou uma transição por máscaras CSS entre a parte superior da arte de identidade já existente e o retrato fornecido pelo usuário em image(4).png. A foto foi apenas convertida para WebP, sem alteração de rosto. No e-book, todos os frames de vídeo foram retirados; a capa original do vídeo é a única imagem, usada na capa e no cartão de acesso ao vídeo. O preparo foi reorganizado em duas páginas de instruções, preservando a primeira pessoa, as medidas e as seis etapas. O PDF passou de 8 para 7 páginas.
+
+## Presente de boas-vindas: revisão de texto
+
+A capa passou a usar “Presente de boas-vindas”. Avisos antes dispersos no preparo foram reunidos em “Antes de usar”, preservando os cuidados com álcool, pele, armazenamento e diferenças de concentração e medidas. As referências da Anvisa aparecem apenas na última página, sob “Referências quanto aos cuidados”. O crédito agora informa o conteúdo autoral de Thiago Sousa e o passo a passo conforme o vídeo publicado em suas redes, com a indicação “Publicado em outubro de 2026”. Foram retiradas as menções ao crédito da capa e à edição. A quantidade permanece em 7 páginas.
