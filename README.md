@@ -48,7 +48,7 @@ As páginas de prévia e os arquivos sem uso do modelo original foram retirados 
 
 A abertura oferece contato direto pelo WhatsApp. Como agendar aparece antes dos serviços, com ajuda para quem ainda não sabe qual escolher. Dúvidas e contato aparecem antes dos conteúdos sociais. No celular, o atalho de WhatsApp se oculta quando o contato principal ou final está visível.
 
-A seleção de Instagram e YouTube é manual. Os players são carregados após um clique; há links para abrir os conteúdos nas plataformas de origem. Para trocar o vídeo principal, edite `data-youtube`, título e descrição. Para trocar uma publicação, atualize `data-instagram`, o link do cartão e a capa correspondente.
+Os cartões selecionados de Instagram e YouTube têm seleção manual; a janela do perfil do Instagram carrega o conteúdo do próprio Instagram. Os players são carregados após um clique; há links para abrir os conteúdos nas plataformas de origem. Para trocar o vídeo principal, edite `data-youtube`, título e descrição. Para trocar uma publicação, atualize `data-instagram`, o link do cartão e a capa correspondente.
 
 Valores e modalidades já confirmados estão publicados nos respectivos serviços. Duração, formação e condições ainda não confirmadas devem ser preenchidas na ficha Projeto site. A ficha e suas respostas não ficam no repositório público.
 
@@ -78,4 +78,8 @@ Oito serviços, treze valores confirmados e doze relatos. A abertura informa onl
 
 ## Página para a bio
 
-`links/` reúne atendimentos, WhatsApp, e-book gratuito, vídeo Água Flórida e redes sociais. O download é livre. O PDF está em `assets/downloads/agua-florida-boas-vindas.pdf`; fontes e critérios editoriais em `docs/ebook-agua-florida.md`.
+`links/` reúne atendimentos, WhatsApp, e-book gratuito, vídeo Água Flórida e redes sociais. O download é livre. O PDF de divulgação está em `assets/downloads/ebook-agua-florida-(@thiago.terapiaseoraculos).pdf`; fontes e critérios editoriais em `docs/ebook-agua-florida.md`.
+
+## Revisão de 01/11/2026
+
+Entrevista Dê Passagem EP.06 em destaque na seção Conteúdos, com player youtube-nocookie responsivo carregado após clique. Acesso à entrevista na biografia e na página Links; presente gratuito acessível na abertura e em Conteúdos, com destino `links/#presente`. Contraste dos números dos cartões corrigido. Diagnóstico, critérios e limites em [docs/revisao-2026-11-01.md](docs/revisao-2026-11-01.md).
