@@ -22,3 +22,5 @@ Adaptar artes sociais para web, priorizando Mentoria, e revisar repetições edi
 ## Apresentação de Links
 
 Saudação “Prazer, sou” exibida acima de Thiago Sousa, mantendo a abertura compacta e os temas existentes.
+
+Organização da abertura: apresentação movida para baixo da fotografia, sem sobrepor o rosto. Conteúdo e controles preservados.

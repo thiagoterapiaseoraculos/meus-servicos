@@ -22,3 +22,8 @@
 @media(max-width:500px){.links-page .hero{height:350px;min-height:0;max-height:none;--photo-start:55px;--brand-height:105px}.links-page .hero-title h1{font-size:32px}}
 @media(max-width:360px){.links-page .hero{height:320px;--photo-start:50px;--brand-height:95px}}
 .links-page .brand-art{height:60px;-webkit-mask-image:none;mask-image:none}
+
+/* A apresentação fica no fluxo da página, abaixo da fotografia. */
+.links-page .hero-title{position:static;padding:18px 20px 16px;background:var(--bg);text-align:center}
+.links-page .hero-title .profession{margin-top:8px}
+.links-page .hero:after{background:linear-gradient(180deg,transparent 76%,var(--bg) 100%)}
