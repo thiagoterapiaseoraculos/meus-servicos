@@ -73,7 +73,7 @@ document.querySelectorAll('[data-instagram]').forEach(button => {
     document.querySelector('#instagram-original').href = original.href;
     const iframe = document.createElement('iframe');
     const shortcode = original.pathname.split("/").filter(Boolean).pop();
-    iframe.src = `https://www.instagram.com/p/${encodeURIComponent(shortcode)}/embed/`;
+    window.thiagoSetMediaFrame(iframe, `https://www.instagram.com/p/${encodeURIComponent(shortcode)}/embed/`);
     iframe.title = `${button.dataset.title} — Instagram de Thiago Sousa`;
     iframe.allow = 'autoplay; encrypted-media; fullscreen; picture-in-picture';
     iframe.allowFullscreen = true;
@@ -108,7 +108,7 @@ document.querySelectorAll('[data-youtube]').forEach(button => {
     original.href = `https://www.youtube.com/watch?v=${videoId}`;
     original.textContent = 'Abrir no YouTube';
     const iframe = document.createElement('iframe');
-    iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?rel=0`;
+    window.thiagoSetMediaFrame(iframe, `https://www.youtube-nocookie.com/embed/${videoId}?rel=0`);
     iframe.title = `${button.dataset.title} — Thiago Sousa no YouTube`;
     iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
     iframe.allowFullscreen = true;

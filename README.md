@@ -87,3 +87,7 @@ Entrevista Dê Passagem EP.06 em destaque na seção Conteúdos, com player yout
 ## Player e páginas informativas — 01/11/2026
 
 Entrevista com player nativo visível no site e em Links, proporção 16:9, sem autoplay. A decisão substitui o pôster e carregamento por botão anteriores. Ícones novos usam SVG. Privacidade e termos em `informacoes/`, acessíveis nos dois rodapés. O [checklist de 20 pontos](docs/checklist-site-20-itens.md) distingue implantação de pendências de dados e validação jurídica; não declara conformidade integral.
+
+## Checklist exato do usuário — 19 itens
+
+Estado atual em [docs/checklist-site-19-itens.md](docs/checklist-site-19-itens.md). Inclui 404, favicons, metadados e preferências funcionais para mídias externas. Analytics aguarda configuração; não existe formulário próprio nem confirmação de contratação por abrir WhatsApp. A lista anterior de vinte pontos fica apenas como histórico.

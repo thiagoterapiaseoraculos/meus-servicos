@@ -28,7 +28,7 @@ video.addEventListener('toggle', () => {
   const player = document.querySelector('#player');
   if (!video.open) { player.replaceChildren(); return; }
   const iframe = document.createElement('iframe');
-  iframe.src = 'https://www.instagram.com/p/Dez1kHcpO6o/embed/';
+  window.thiagoSetMediaFrame(iframe, 'https://www.instagram.com/p/Dez1kHcpO6o/embed/');
   iframe.title = 'Água Flórida — Thiago Sousa';
   iframe.allow = 'encrypted-media; fullscreen; picture-in-picture';
   iframe.referrerPolicy = 'strict-origin-when-cross-origin';
