@@ -83,3 +83,7 @@ Oito serviços, treze valores confirmados e doze relatos. A abertura informa onl
 ## Revisão de 01/11/2026
 
 Entrevista Dê Passagem EP.06 em destaque na seção Conteúdos, com player youtube-nocookie responsivo carregado após clique. Acesso à entrevista na biografia e na página Links; presente gratuito acessível na abertura e em Conteúdos, com destino `links/#presente`. Contraste dos números dos cartões corrigido. Diagnóstico, critérios e limites em [docs/revisao-2026-11-01.md](docs/revisao-2026-11-01.md).
+
+## Player e páginas informativas — 01/11/2026
+
+Entrevista com player nativo visível no site e em Links, proporção 16:9, sem autoplay. A decisão substitui o pôster e carregamento por botão anteriores. Ícones novos usam SVG. Privacidade e termos em `informacoes/`, acessíveis nos dois rodapés. O [checklist de 20 pontos](docs/checklist-site-20-itens.md) distingue implantação de pendências de dados e validação jurídica; não declara conformidade integral.

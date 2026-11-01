@@ -10,3 +10,5 @@
 @media(max-width:500px){.hero{height:calc(130vw + 170px);max-height:790px;min-height:620px;--photo-start:145px;--brand-height:180px}}@media(max-width:360px){.hero{--photo-start:135px;--brand-height:165px}}
 
 #presente{scroll-margin-top:24px}.original-video{min-height:44px;align-items:center}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.links-interview{margin:24px 0;padding:20px 0;border-top:1px solid var(--line,#ffffff24);border-bottom:1px solid var(--line,#ffffff24)}.links-interview h3{font-family:Georgia,serif;font-weight:400;font-size:25px;line-height:1.2;margin:0 0 10px}.links-interview>p{font-size:14px;margin:0 0 16px}.links-interview-screen{position:relative;aspect-ratio:16/9;width:100%;background:#121225;border-radius:6px;overflow:hidden}.links-interview-screen iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.links-interview .original-video{display:flex;gap:12px;align-items:center}.links-interview svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.5}

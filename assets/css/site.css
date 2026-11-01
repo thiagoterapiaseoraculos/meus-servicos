@@ -89,3 +89,5 @@
 @media(max-width:700px){.interview-poster-copy>.eyebrow,.interview-poster-copy>span:last-child{display:none}.interview-poster-copy{gap:0;padding:10px 14px 54px}.interview-poster-title{font-size:clamp(18px,4.8vw,28px)}}
 
 .service .card-number{opacity:1}
+
+.interview-copy .text-link svg,.about-interview-link svg,.hero-actions .text-link svg{width:18px;height:18px}.interview-screen{overflow:hidden}.interview-screen iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.social-play svg{width:26px;height:26px;fill:currentColor;stroke:none}

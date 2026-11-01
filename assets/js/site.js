@@ -288,30 +288,3 @@ if (feedbackCarousel) {
   feedbackCarousel.querySelector('.feedback-controls').hidden = false;
   updatePosition(); scheduleRotation();
 }
-
-// The interview contacts YouTube only after the visitor chooses to watch.
-const interviewLoad = document.querySelector('#interview-load');
-const interviewScreen = document.querySelector('#interview-screen');
-const interviewClose = document.querySelector('#interview-close');
-if (interviewLoad && interviewScreen && interviewClose) {
-  interviewLoad.addEventListener('click', () => {
-    const iframe = document.createElement('iframe');
-    iframe.src = 'https://www.youtube-nocookie.com/embed/ESNDiNj9XvI?rel=0';
-    iframe.title = 'Dê Passagem EP.06 — entrevista com Thiago Sousa';
-    iframe.allow = 'accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
-    iframe.allowFullscreen = true;
-    iframe.referrerPolicy = 'strict-origin-when-cross-origin';
-    interviewLoad.hidden = true;
-    interviewScreen.append(iframe);
-    interviewClose.hidden = false;
-    document.body.classList.add('watching-interview');
-    iframe.focus();
-  });
-  interviewClose.addEventListener('click', () => {
-    interviewScreen.querySelector('iframe')?.remove();
-    interviewClose.hidden = true;
-    interviewLoad.hidden = false;
-    document.body.classList.remove('watching-interview');
-    interviewLoad.focus();
-  });
-}
