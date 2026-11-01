@@ -16,7 +16,7 @@
 .links-page .hero{height:360px;min-height:0;max-height:none;--photo-start:70px;--brand-height:120px}
 .links-page .hero-photo{object-position:50% 25%}
 .links-page .hero-title{bottom:18px}
-.links-page .hero-title .hello{display:none}
+.links-page .hero-title .hello{display:block;font-size:14px;line-height:1.5;letter-spacing:.02em;margin:0 0 4px}
 .links-page .hero-title h1{font-size:36px}
 .links-page .intro{margin-block:0 20px;font-size:13px}
 @media(max-width:500px){.links-page .hero{height:350px;min-height:0;max-height:none;--photo-start:55px;--brand-height:105px}.links-page .hero-title h1{font-size:32px}}

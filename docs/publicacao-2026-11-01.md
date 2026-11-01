@@ -18,3 +18,7 @@ Oito serviços, treze valores, doze relatos, destinos de contato e PDFs preserva
 ## Próximo lote
 
 Adaptar artes sociais para web, priorizando Mentoria, e revisar repetições editoriais. Analytics, Planilhas, confirmação Instagram e domínio próprio continuam pendentes.
+
+## Apresentação de Links
+
+Saudação “Prazer, sou” exibida acima de Thiago Sousa, mantendo a abertura compacta e os temas existentes.
