@@ -46,9 +46,9 @@ As páginas de prévia e os arquivos sem uso do modelo original foram retirados 
 
 ## Conteúdo e atendimento
 
-A abertura oferece contato direto pelo WhatsApp. Como agendar aparece antes dos serviços, com ajuda para quem ainda não sabe qual escolher. Dúvidas e contato aparecem antes dos conteúdos sociais. No celular, o atalho de WhatsApp se oculta quando o contato principal ou final está visível.
+A abertura oferece contato direto pelo WhatsApp. Como agendar aparece antes dos serviços, com ajuda para quem ainda não sabe qual escolher. Dúvidas e contato aparecem antes dos conteúdos sociais. No celular, o atalho de WhatsApp se oculta quando o contato do cabeçalho, principal ou final está visível.
 
-Os cartões selecionados de Instagram e YouTube têm seleção manual; a janela do perfil do Instagram carrega o conteúdo do próprio Instagram. Os players são carregados após um clique; há links para abrir os conteúdos nas plataformas de origem. Para trocar o vídeo principal, edite `data-youtube`, título e descrição. Para trocar uma publicação, atualize `data-instagram`, o link do cartão e a capa correspondente.
+Os cartões de Instagram e YouTube têm seleção editorial manual. A entrevista e a janela do perfil ficam disponíveis após permitir mídias externas; outros vídeos e publicações abrem após clique e seguem a mesma preferência. Há links para abrir os conteúdos nas plataformas. Para trocar a entrevista, atualize o iframe `data-media-src`, título, descrição e link alternativo nas duas páginas. Para trocar outros vídeos, edite `data-youtube`; para publicações, atualize `data-instagram`, o link e a capa correspondente.
 
 Valores e modalidades já confirmados estão publicados nos respectivos serviços. Duração, formação e condições ainda não confirmadas devem ser preenchidas na ficha Projeto site. A ficha e suas respostas não ficam no repositório público.
 
@@ -91,3 +91,21 @@ Entrevista com player nativo visível no site e em Links, proporção 16:9, sem 
 ## Checklist exato do usuário — 19 itens
 
 Estado atual em [docs/checklist-site-19-itens.md](docs/checklist-site-19-itens.md). Inclui 404, favicons, metadados e preferências funcionais para mídias externas. Analytics aguarda configuração; não existe formulário próprio nem confirmação de contratação por abrir WhatsApp. A lista anterior de vinte pontos fica apenas como histórico.
+
+## Ajustes locais de privacidade, aparência e navegação — 01/11/2026
+
+Preferências de mídia acessíveis inclusive sobre o modal de vídeo/publicação; texto do aviso e página de Informações revisados. Acesso livre, sem aceite obrigatório de termos. Tema claro/escuro compartilhado entre principal, Links, Informações e 404; script em `assets/js/tema.js` e tokens/estilos em `assets/css/tema.css`. A página informativa usa `assets/css/informacoes.css`.
+
+O script de tema é carregado no head antes dos estilos; a folha de tema vem por último. Ele reconhece a preferência antiga de Links, mantém a escolha entre páginas e sincroniza abas. Ao alterar tema, fundo e texto dos cartões mudam juntos para preservar contraste.
+
+Cabeçalho móvel com acesso direto às quatro seções, 404 com destinos reais e estado bloqueado do Instagram compacto. Relatório, testes e propostas de organização/textos/artes: [docs/publicacao-2026-11-01.md](docs/publicacao-2026-11-01.md). Os trechos de revisão anteriores registram a evolução dos players; esta seção e a descrição atual de conteúdo prevalecem para a implementação local.
+
+As alterações desta revisão foram preparadas na branch de trabalho; o histórico de publicação está registrado abaixo.
+
+## Lote 1 — navegação mais curta
+
+Serviços e valores agora aparecem logo após a abertura. A biografia completa e os conteúdos adicionais continuam disponíveis por expansão; o perfil Instagram só é montado ao abrir seu bloco e respeita a preferência de mídia. Links tem abertura compacta. O escuro permanece padrão, com seletor lua/sol igual ao de Links. Evidências e próximo lote em [docs/publicacao-2026-11-01.md](docs/publicacao-2026-11-01.md).
+
+## Publicação autorizada — 01/11/2026
+
+Revisão de privacidade, temas, navegação e lote 1 preparada para integração em `main`, conforme autorização do responsável. Base anterior preservada em `backup/antes-publicacao-codex-2026-11-01`. Artes próprias para web e revisão editorial adicional continuam para o próximo lote.

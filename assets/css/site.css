@@ -91,3 +91,37 @@
 .service .card-number{opacity:1}
 
 .interview-copy .text-link svg,.about-interview-link svg,.hero-actions .text-link svg{width:18px;height:18px}.interview-screen{overflow:hidden}.interview-screen iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.social-play svg{width:26px;height:26px;fill:currentColor;stroke:none}
+/* Lote 1: serviços primeiro e conteúdo complementar sob demanda. */
+.site-page .section{padding-block:72px}
+.site-page .hero{padding-block:56px 48px}
+.site-page .signature{display:none}
+.about-story{margin:18px 0 22px;font-size:16px}
+.about-story summary{display:flex;align-items:center;justify-content:space-between;gap:20px;cursor:pointer;list-style:none;min-height:44px;padding:10px 0;border-bottom:1px solid #30291f40;font-size:14px}
+.about-story summary::-webkit-details-marker,.content-extras summary::-webkit-details-marker{display:none}
+.about-story summary:focus-visible{outline:2px solid #5c5143;outline-offset:5px}
+.about-story summary>span,.disclosure-icon{font-size:25px;line-height:1}
+.about-story[open] summary>span,.content-extras[open] .disclosure-icon{transform:rotate(45deg)}
+.about-story>div{padding-top:18px}
+.content-extras{border-block:1px solid var(--line);margin:28px 0}
+.content-extras>summary{display:flex;align-items:center;justify-content:space-between;gap:20px;cursor:pointer;list-style:none;min-height:76px;padding:20px 0;color:var(--cream);font-size:18px}
+.content-extras>summary small{display:block;font-size:13px;color:var(--muted);margin-top:6px}
+.content-extras-body{padding-top:30px}
+.content-extras .instagram-profile-window>[data-profile-mount] iframe{height:720px}
+@media(max-width:700px){
+ .site-page .section{padding-block:42px}
+ .site-page .hero{padding-block:30px 32px;gap:24px}
+ .site-page .hero-description{margin-top:18px}
+ .site-page .hero-visual{width:min(100%,320px)}
+ .site-page .portrait{max-height:240px}
+ .site-page .portrait img{height:240px;object-fit:cover;object-position:50% 40%}
+ .site-page .about.section{padding-block:36px}
+ .site-page .about-copy{margin-top:22px}
+ .site-page .steps-intro.section,.site-page .faq.section{padding-block:36px}
+ .site-page .section-heading{margin-bottom:26px}
+ .site-page .section-heading>p{margin-top:16px}
+ .site-page .interview-feature{margin-bottom:24px}
+ .site-page .ebook-invitation{margin-bottom:24px}
+ .content-extras>summary{font-size:17px}
+}
+/* Keep the optional media controls clear of the floating contact action. */
+body.site-page:has(.content-extras[open]) .mobile-contact{display:none}

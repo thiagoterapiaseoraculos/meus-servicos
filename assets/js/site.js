@@ -11,6 +11,18 @@ function cleanPageAddress() {
 cleanPageAddress();
 window.addEventListener('hashchange', cleanPageAddress);
 
+// Mount the optional profile only while the additional content is expanded.
+const contentExtras = document.querySelector('#mais-conteudos');
+if (contentExtras) {
+  const profileTemplate = contentExtras.querySelector('[data-profile-template]');
+  const profileMount = contentExtras.querySelector('[data-profile-mount]');
+  contentExtras.addEventListener('toggle', () => {
+    if (!profileMount || !profileTemplate) return;
+    if (!contentExtras.open) { profileMount.replaceChildren(); return; }
+    if (!profileMount.childElementCount) profileMount.append(profileTemplate.content.cloneNode(true));
+  });
+}
+
 const dialog = document.querySelector('#art-dialog');
 const artImage = document.querySelector('#art-image');
 const frame = document.querySelector('.art-frame');
@@ -121,15 +133,18 @@ document.querySelectorAll('[data-youtube]').forEach(button => {
 
 // Keep contact within reach after the main call to action leaves the screen.
 const mobileContact = document.querySelector('.mobile-contact');
+const headerContact = document.querySelector('.site-header .nav-contact');
 const heroActions = document.querySelector('.hero-actions');
 const contactSection = document.querySelector('#contato');
 if (mobileContact && heroActions && contactSection) {
   let heroContactVisible = false;
   let finalContactVisible = false;
-  const updateMobileContact = () => { mobileContact.hidden = heroContactVisible || finalContactVisible; };
+  let headerContactVisible = false;
+  const updateMobileContact = () => { mobileContact.hidden = headerContactVisible || heroContactVisible || finalContactVisible; };
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
+        if (entry.target === headerContact) headerContactVisible = entry.isIntersecting;
         if (entry.target === heroActions) heroContactVisible = entry.isIntersecting;
         if (entry.target === contactSection) finalContactVisible = entry.isIntersecting;
       });
@@ -137,6 +152,7 @@ if (mobileContact && heroActions && contactSection) {
     }, { threshold: 0 });
     observer.observe(heroActions);
     observer.observe(contactSection);
+    if (headerContact) observer.observe(headerContact);
   } else mobileContact.hidden = false;
 }
 
